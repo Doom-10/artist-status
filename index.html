@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="noindex">
+<!-- Когда кабинет вернётся на этот адрес, открытая вкладка сама перейдёт в него. -->
+<meta http-equiv="refresh" content="300">
+<title>Кабинет артиста — технические работы</title>
+<meta name="description" content="Кабинет артиста UniProject временно недоступен из-за атаки на хостинг-провайдера Beget. Восстанавливаем работу.">
+<meta name="theme-color" content="#F5F6F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14171D" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/logo.png">
+<style>
+/* Палитра — как у кабинета: светлая по умолчанию, тёмно-синий #1F3A93 и золото #D4A12A. */
+:root{--bg:#F5F6F4;--panel:#FFFFFF;--panel2:#F7F8FA;--line:#E3E5E0;--text:#16181D;--muted:#5F646C;--faint:#8A8F98;
+  --accent:#1F3A93;--gold:#D4A12A;--red:#C0392B;--teal:#067A68;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color-scheme:light}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#14171D;--panel:#1B1F27;--panel2:#222733;--line:#2E3442;--text:#ECEEF3;--muted:#A3AAB8;--faint:#77808F;
+    --accent:#8A96FF;--gold:#E6C04D;--red:#FF6B6B;--teal:#37CFB0;color-scheme:dark}
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:32px 16px;
+  background:var(--bg);color:var(--text);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+main{width:100%;max-width:560px;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:32px;
+  box-shadow:0 10px 30px rgba(20,24,40,.06)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;letter-spacing:-.01em}
+.logo img{display:block;width:30px;height:30px;border-radius:8px}
+.logo b{color:var(--gold)}
+.logo em{color:var(--faint);font-weight:500;font-size:13.5px;font-style:normal}
+.state{display:inline-flex;align-items:center;gap:8px;margin-top:28px;padding:5px 12px 5px 10px;border-radius:999px;
+  background:var(--panel2);border:1px solid var(--line);color:var(--muted);font-size:13px;font-weight:600}
+.pulse{width:8px;height:8px;border-radius:50%;background:var(--red);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.3}}
+@media (prefers-reduced-motion: reduce){.pulse{animation:none}}
+h1{margin:14px 0 12px;font-size:28px;line-height:1.2;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 12px;color:var(--muted);text-wrap:pretty}
+.safe{display:flex;gap:12px;align-items:flex-start;margin:20px 0;padding:14px 16px;border:1px solid var(--line);
+  border-radius:12px;background:var(--panel2)}
+.safe svg{flex:none;margin-top:2px;color:var(--teal)}
+.safe p{margin:0;color:var(--text)}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+footer{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--faint)}
+@media (max-width:480px){main{padding:24px 20px}h1{font-size:24px}}
+</style>
+</head>
+<body>
+<main>
+  <div class="logo">
+    <img src="/logo.png" alt="" width="30" height="30"><span>UniProject<b>.</b></span><em>Кабинет артиста</em>
+  </div>
+
+  <span class="state"><span class="pulse" aria-hidden="true"></span>Кабинет временно недоступен</span>
+  <h1>Восстанавливаем Кабинет артиста</h1>
+  <p>2&nbsp;ноября хакеры атаковали хостинг-провайдера Beget, на&nbsp;серверах которого работает кабинет. Пострадали
+    серверы многих компаний, и&nbsp;наш тоже, поэтому кабинет и&nbsp;страницы артистов пока не&nbsp;открываются.</p>
+
+  <div class="safe">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+    <p>Данные банковских карт мы никогда не&nbsp;хранили: оплату принимает ЮKassa, и&nbsp;авария её не&nbsp;затронула.</p>
+  </div>
+
+  <p>Как только всё заработает, кабинет откроется по&nbsp;этому же адресу&nbsp;— страница обновится сама.</p>
+  <p>Вопросы&nbsp;— на&nbsp;<a href="mailto:doom10cfera@yandex.ru">doom10cfera@yandex.ru</a></p>
+
+  <footer>Обновлено 4&nbsp;ноября 2026</footer>
+</main>
+</body>
+</html>
